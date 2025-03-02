@@ -1,0 +1,82 @@
+# Cline Project Intelligence
+
+This file captures important patterns, preferences, and project intelligence that help Cline work more effectively. It serves as a learning journal that evolves as the project progresses.
+
+## Project Patterns
+
+Document recurring patterns specific to this project
+
+## User Preferences
+
+Note user preferences for code style, communication, and workflow
+
+## Implementation Paths
+
+Document critical implementation paths that are important to understand
+
+## Known Challenges
+
+List known challenges and how to approach them
+
+## Tool Usage
+
+Document patterns for using specific tools in this project
+
+## Decision Evolution
+
+Track how key decisions have evolved over time
+
+## Workflow Optimizations
+
+Note any workflow optimizations discovered
+
+## Code Organization
+
+Document patterns for how code is organized in this project
+
+## Markdown Standards
+
+The project uses markdownlint to enforce consistent markdown formatting. Always check the "Workspace Problems" section for markdownlint warnings before and after editing files. Follow these key rules:
+
+### Headers
+
+- MD001: Heading levels should only increment by one level at a time
+- MD022: Headings should be surrounded by blank lines
+- MD023: Headings must start at the beginning of the line
+- MD024: Avoid multiple headings with the same content
+- MD025: Only one top-level (H1) heading per document
+- MD041: First line in file should be a top-level heading
+
+### Lists
+
+- MD004: Use consistent unordered list style (asterisks)
+- MD005: Maintain consistent indentation for list items at the same level
+- MD007: Use consistent unordered list indentation
+- MD030: Include spaces after list markers
+- MD032: Lists should be surrounded by blank lines
+
+### Spacing
+
+- MD009: No trailing spaces
+- MD010: No hard tabs, use spaces
+- MD012: No multiple consecutive blank lines
+- MD031: Fenced code blocks should be surrounded by blank lines
+- MD047: Files should end with a single newline character
+
+### Code and Links
+
+- MD034: No bare URLs
+- MD038: No spaces inside code span elements
+- MD039: No spaces inside link text
+- MD040: Fenced code blocks should have a language specified
+- MD042: No empty links
+
+### Tables
+
+- MD055: Consistent table pipe style
+- MD056: Consistent table column count
+- MD058: Tables should be surrounded by blank lines
+
+---
+
+This file evolves naturally as Cline learns more about the project and user preferences. It should not be forced but should grow organically through experience.
