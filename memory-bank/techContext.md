@@ -6,7 +6,47 @@ List and describe the main technologies used in the project
 
 ## Development Environment
 
-How to set up and configure the development environment
+### VSCode Configuration
+
+The project includes a `.vscode` directory with standardized configuration:
+
+* settings.json
+  * Enforces consistent code formatting
+  * Configures markdownlint rules
+  * Sets file associations and editor behaviors
+  * Manages workspace-specific settings
+
+* extensions.json
+  * Required Extensions:
+    * davidanson.vscode-markdownlint: Markdown linting
+    * yzhang.markdown-all-in-one: Markdown support
+    * esbenp.prettier-vscode: Code formatting
+    * dbaeumer.vscode-eslint: JavaScript/TypeScript linting
+    * streetsidesoftware.code-spell-checker: Spell checking
+    * eamodio.gitlens: Git integration
+    * ms-vscode.live-server: Live preview
+
+* launch.json
+  * Provides debug configurations
+  * Configured for Node.js debugging
+
+* tasks.json
+  * Custom tasks for:
+    * Memory bank verification
+    * Markdown lint checking
+
+* snippets/markdown.json
+  * Custom snippets for memory bank documentation:
+    * Memory bank section template (prefix: mbs)
+    * Memory bank file header (prefix: mbh)
+    * Progress item template (prefix: mbp)
+
+### Maintenance Requirements
+
+* All VSCode configurations must be maintained in the `.vscode` directory
+* New snippets should be added for repetitive code patterns
+* Extension recommendations should be updated as new tools are adopted
+* Settings should be kept in sync with project standards
 
 ## Build Process
 

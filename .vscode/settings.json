@@ -1,0 +1,47 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "explicit"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "markdownlint.config": {
+    "MD001": true,
+    "MD022": true,
+    "MD023": true,
+    "MD024": true,
+    "MD025": true,
+    "MD041": true,
+    "MD004": true,
+    "MD005": true,
+    "MD007": true,
+    "MD030": true,
+    "MD032": true,
+    "MD009": true,
+    "MD010": true,
+    "MD012": true,
+    "MD031": true,
+    "MD047": true,
+    "MD034": true,
+    "MD038": true,
+    "MD039": true,
+    "MD040": true,
+    "MD042": true,
+    "MD055": true,
+    "MD056": true,
+    "MD058": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true
+  },
+  "files.associations": {
+    ".clinerules": "markdown"
+  }
+}
