@@ -21,10 +21,12 @@ The TFTDD (Type-First Test-Driven Development) template provides a structured fo
    * Type documentation generation
 
 2. Testing Infrastructure
-   * Jest integration with TypeScript support
-   * Type testing capabilities
-   * Test coverage reporting
-   * Automated test running
+   * Jest with @jest/globals for type-safe testing
+   * Mandatory TDD workflow with pre-commit hooks
+   * Type testing capabilities with strict safety (no 'any')
+   * IsolatedModules enabled for better performance
+   * Test coverage reporting and enforcement
+   * Automated test execution via Husky
 
 3. AI Integration
    * Type generation assistance

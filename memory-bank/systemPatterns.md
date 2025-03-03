@@ -122,19 +122,34 @@ flowchart LR
    ```
 
 2. Testing Patterns
-   * Type Test Pattern
+   * Test-Driven Development Pattern
+
+   ```typescript
+   // 1. Write test first
+   import { describe, expect, it } from '@jest/globals';
+   
+   describe('User', () => {
+     it('should validate email format', () => {
+       const result = validateEmail('test@example.com');
+       expect(result.success).toBe(true);
+     });
+   });
+   ```
+
+   * Type Test Pattern with Strict Safety
 
    ```typescript
    describe('Type Tests', () => {
      it('should enforce type constraints', () => {
        type Expected = Result<string>;
        type Actual = typeof result;
+       // No 'any' allowed in test files
        assertType<Expected, Actual>();
      });
    });
    ```
 
-   * Test Factory Pattern
+   * Test Factory Pattern with Type Guarantees
 
    ```typescript
    function createTestUser(): User {
@@ -200,10 +215,12 @@ flowchart LR
    * Generate type documentation
 
 2. Testing
-   * Jest as test runner
-   * Custom type testing utilities
-   * Test factory patterns
-   * Automated coverage checks
+   * Jest with @jest/globals for type-safe testing
+   * TDD workflow with tests before implementation
+   * Pre-commit test execution via Husky
+   * Custom type testing utilities with strict safety
+   * Test factory patterns with full type coverage
+   * Automated coverage checks and isolatedModules
 
 3. Documentation
    * Memory Bank for project context

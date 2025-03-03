@@ -90,7 +90,9 @@ The TFTDD template solves several critical challenges in modern TypeScript devel
    * Type generation tools
 
 2. Testing Tools
-   * Jest integration
+   * Jest with @jest/globals for type safety
+   * Mandatory TDD workflow with Husky hooks
+   * Strict type-safe testing (no 'any')
    * Type testing utilities
    * Test helpers and fixtures
    * Coverage reporting
@@ -119,16 +121,19 @@ The TFTDD template solves several critical challenges in modern TypeScript devel
      D --> E[Document Changes]
    ```
 
-2. Testing Workflow
+2. Testing Workflow (TDD)
 
    ```mermaid
    flowchart TD
-     A[Write Test] --> B[Run Tests]
-     B --> C{Pass?}
-     C -->|No| D[Implement Code]
-     D --> B
-     C -->|Yes| E[Refactor]
-     E --> B
+     A[Write Test] --> B[Use @jest/globals]
+     B --> C[Run Tests]
+     C --> D{Pass?}
+     D -->|No| E[Implement Code]
+     E --> F{Pre-commit Hook}
+     F -->|Fail| C
+     F -->|Pass| G[Refactor]
+     G --> C
+     D -->|Yes| G
    ```
 
 3. Documentation Flow

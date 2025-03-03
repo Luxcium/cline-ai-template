@@ -104,6 +104,10 @@ Strengthening project foundation through emergent patterns:
    * Documented type patterns
 
 2. Testing Approach
+   * Test-Driven Development (TDD) as mandatory practice
+   * Jest with @jest/globals implementation
+   * Pre-commit test execution via Husky
+   * Strict type safety in test files (no 'any')
    * Pattern-driven test development
    * Consistent test structure
    * Reusable test patterns
@@ -158,8 +162,10 @@ Observing natural emergence of:
   * Living documentation maintenance
 
 * Test Environment Patterns
-  * TypeScript-Jest integration
-  * Path resolution consistency
+  * TypeScript-Jest integration with @jest/globals
+  * Mandatory TDD workflow with pre-commit hooks
+  * Strict type safety enforcement in tests
+  * Path resolution consistency with isolatedModules
   * Test file organization
   * Development workflow efficiency
 

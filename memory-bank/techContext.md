@@ -8,8 +8,10 @@
    * npm/yarn package management
 
 2. Testing Technologies
-   * Jest test runner
-   * ts-jest for TypeScript support
+   * Jest with @jest/globals for type-safe testing
+   * ts-jest for TypeScript support with isolatedModules
+   * Test-Driven Development (TDD) workflow
+   * Husky pre-commit test hooks
    * Custom type testing utilities
    * Jest code coverage
 
@@ -152,14 +154,16 @@ tftdd-template/
 ## Testing Strategy
 
 1. Unit Testing
-   * Jest test runner
-   * TypeScript support
-   * Coverage reporting
-   * Type validation
+   * Test-Driven Development (TDD) first approach
+   * Jest with @jest/globals for type safety
+   * Pre-commit test execution via Husky
+   * TypeScript support with isolatedModules
+   * Coverage reporting and enforcement
 
 2. Type Testing
-   * Custom type assertions
-   * Type compatibility checks
+   * No usage of 'any' in test files
+   * Custom type assertions with strict checking
+   * Type compatibility verification
    * Generic type testing
    * Type inference validation
 
@@ -187,7 +191,8 @@ tftdd-template/
 
 * `jest`: Test runner
 * `ts-jest`: TypeScript support for Jest
-* `@types/jest`: Jest type definitions
+* `@jest/globals`: Type-safe Jest globals
+* `husky`: Git hooks for pre-commit test execution
 * `eslint`: Code linting
 * `prettier`: Code formatting
 * `@typescript-eslint/*`: TypeScript ESLint integration
@@ -228,6 +233,10 @@ tftdd-template/
    * Documentation requirements
 
 2. Testing Constraints
+   * Test-Driven Development (TDD) mandatory
+   * Tests must be written before implementation
+   * Pre-commit test execution required
+   * No usage of 'any' in test files
    * Minimum coverage threshold
    * Required type tests
    * Documentation tests

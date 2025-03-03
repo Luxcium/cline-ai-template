@@ -8,7 +8,8 @@ Initial setup phase - Core infrastructure and type system foundation established
 
 1. Project Infrastructure
    * TypeScript project initialized
-   * Jest testing configured with path resolution patterns
+   * Jest setup with @jest/globals and isolatedModules
+   * TDD workflow with pre-commit test hooks via Husky
    * Modern ESLint flat configuration implemented
    * @stylistic/eslint-plugin integrated
    * Streamlined Prettier setup
@@ -44,8 +45,9 @@ Initial setup phase - Core infrastructure and type system foundation established
    * Test environment optimization
 
 2. Development Workflow
+   * Test-Driven Development (TDD) as mandatory practice
    * Type-first implementation strategy
-   * Test-driven validation approach
+   * Strict type safety in test files (no 'any')
    * Documentation-integrated development
    * Progressive pattern reinforcement
 
@@ -84,10 +86,11 @@ Initial setup phase - Core infrastructure and type system foundation established
    * Type inference utilities
 
 2. Testing
-   * Advanced test patterns
+   * Additional test pattern examples
    * Performance test suite
    * Integration tests
-   * Custom matchers
+   * Custom Jest matchers
+   * Stricter type validation in tests
 
 3. Documentation
    * Complete tutorial series
@@ -115,7 +118,7 @@ Initial setup phase - Core infrastructure and type system foundation established
 
 3. Development Patterns
    * Type-first methodology reinforcement
-   * Test-driven development effectiveness
+   * Test-Driven Development (TDD) with strict type safety
    * Documentation integration importance
 
 ## Known Issues
