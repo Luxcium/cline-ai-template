@@ -2,6 +2,7 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  globals: { 'ts-jest': { isolatedModules: true } },
   roots: ['<rootDir>/src', '<rootDir>/tests'],
   modulePaths: ['<rootDir>'],
   moduleNameMapper: {
@@ -11,7 +12,7 @@ module.exports = {
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['/node_modules/'],
   verbose: true,
-  testMatch: ['**/*.test.ts'],
+  testMatch: ['**/tests/**/*.test.(ts|tsx|js)'],
   transform: {
     '^.+\\.tsx?$': [
       'ts-jest',

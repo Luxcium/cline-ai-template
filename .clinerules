@@ -68,10 +68,15 @@ List known challenges and how to approach them
 
 ### Testing Strategy
 
+* Jest must be configured using @jest/globals instead of @types/jest
+* All functions must have a corresponding Jest test file before implementation (TDD)
+* Test execution must be automated before every commit using Husky
+* Jest must enforce strict type safety; no usage of `any` in test files
 * Jest configuration aligned with TypeScript
 * Path resolution consistency
 * Coverage reporting integration
 * Type-safe test execution
+* Ensure isolatedModules: true in Jest configuration
 
 ## Code Organization
 
