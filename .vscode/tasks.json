@@ -4,25 +4,66 @@
     {
       "label": "Verify Memory Bank",
       "type": "shell",
-      "command": "echo 'Verifying memory bank structure...' && ls -la memory-bank/",
+      "command": "node",
+      "args": [
+        "scripts/verify-memory-bank.js"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate Documentation",
+      "type": "npm",
+      "script": "docs",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run All Tests",
+      "type": "npm",
+      "script": "test",
       "group": {
         "kind": "test",
         "isDefault": true
       },
       "presentation": {
         "reveal": "always",
-        "panel": "new"
-      }
+        "panel": "shared"
+      },
+      "problemMatcher": []
     },
     {
-      "label": "Check Markdown Lint",
-      "type": "shell",
-      "command": "echo 'Running markdownlint on documentation...'",
-      "problemMatcher": [],
-      "group": {
-        "kind": "test",
-        "isDefault": false
-      }
+      "label": "Build Project",
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "Full CI Check",
+      "type": "npm",
+      "script": "ci",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
     }
   ]
 }

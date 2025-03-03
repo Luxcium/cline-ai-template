@@ -2,39 +2,277 @@
 
 ## Architecture Overview
 
-High-level description of the system architecture
+The TFTDD template follows a layered architecture that emphasizes type safety and testability:
+
+```mermaid
+flowchart TD
+    subgraph Types
+        T1[Core Types]
+        T2[Domain Types]
+        T3[Utility Types]
+        T4[Validators]
+    end
+
+    subgraph Testing
+        Test1[Test Utilities]
+        Test2[Type Tests]
+        Test3[Unit Tests]
+        Test4[Integration Tests]
+    end
+
+    subgraph Documentation
+        D1[Memory Bank]
+        D2[API Docs]
+        D3[Examples]
+    end
+
+    subgraph AI
+        AI1[Type Generation]
+        AI2[Test Generation]
+        AI3[Doc Assistance]
+    end
+
+    Types --> Testing
+    Testing --> Documentation
+    AI --> Types
+    AI --> Testing
+    AI --> Documentation
+```
 
 ## Key Components
 
-List and describe the main components of the system
+1. Type System
+   * Core type definitions
+   * Runtime type validators
+   * Type utilities
+   * Error handling types
+
+2. Testing Framework
+   * Test runners
+   * Custom matchers
+   * Test utilities
+   * Coverage tools
+
+3. Documentation System
+   * Memory Bank
+   * API documentation
+   * Example code
+   * Development guides
+
+4. AI Integration
+   * Code generation
+   * Test assistance
+   * Documentation help
 
 ## Component Relationships
 
-How do the components interact with each other?
+```mermaid
+flowchart LR
+    subgraph Core
+        Types --> Validation
+        Validation --> ErrorHandling
+        ErrorHandling --> Types
+    end
+
+    subgraph Testing
+        TestUtils --> Types
+        Types --> TypeTests
+        Implementation --> UnitTests
+    end
+
+    subgraph Documentation
+        Types --> ApiDocs
+        Implementation --> Examples
+        Architecture --> MemoryBank
+    end
+
+    subgraph AI
+        Types --> Generation
+        Testing --> Assistance
+        Documentation --> Enhancement
+    end
+```
 
 ## Design Patterns
 
-What design patterns are used in the system and where?
+1. Type-First Patterns
+   * Result Type Pattern
+
+   ```typescript
+   type Result<T, E = Error> = 
+     | { success: true; value: T }
+     | { success: false; error: E };
+   ```
+
+   * Type Validator Pattern
+
+   ```typescript
+   interface TypeValidator<T> {
+     validate(input: unknown): Result<T>;
+     schema: z.ZodType<T>;
+   }
+   ```
+
+   * Type Guard Pattern
+
+   ```typescript
+   function isSuccess<T>(result: Result<T>): result is Success<T> {
+     return result.success === true;
+   }
+   ```
+
+2. Testing Patterns
+   * Type Test Pattern
+
+   ```typescript
+   describe('Type Tests', () => {
+     it('should enforce type constraints', () => {
+       type Expected = Result<string>;
+       type Actual = typeof result;
+       assertType<Expected, Actual>();
+     });
+   });
+   ```
+
+   * Test Factory Pattern
+
+   ```typescript
+   function createTestUser(): User {
+     return {
+       id: generateId(),
+       name: 'Test User',
+       email: 'test@example.com'
+     };
+   }
+   ```
+
+3. Documentation Patterns
+   * Memory Bank Pattern
+
+   ```markdown
+   # Component Documentation
+   ## Overview
+   [Component description]
+   ## Design Decisions
+   [Key decisions and rationale]
+   ## Usage Examples
+   [Code examples]
+   ```
 
 ## Data Flow
 
-How does data flow through the system?
+1. Type Validation Flow
+
+   ```mermaid
+   flowchart LR
+     Input[Raw Input] --> Validator[Type Validator]
+     Validator --> Valid{Valid?}
+     Valid -->|Yes| Success[Success Result]
+     Valid -->|No| Error[Error Result]
+   ```
+
+2. Test Execution Flow
+
+   ```mermaid
+   flowchart LR
+     Test[Test Case] --> Setup[Test Setup]
+     Setup --> Execute[Execute Test]
+     Execute --> Assert[Assertions]
+     Assert --> Cleanup[Test Cleanup]
+   ```
+
+3. Documentation Flow
+
+   ```mermaid
+   flowchart LR
+     Code[Source Code] --> TypeDoc[TypeDoc]
+     TypeDoc --> ApiDocs[API Docs]
+     Code --> Memory[Memory Bank]
+     Memory --> Context[Project Context]
+   ```
 
 ## Key Technical Decisions
 
-Important technical decisions and their rationale
+1. Type System
+   * Use TypeScript strict mode
+   * Implement Result type for error handling
+   * Use Zod for runtime validation
+   * Generate type documentation
+
+2. Testing
+   * Jest as test runner
+   * Custom type testing utilities
+   * Test factory patterns
+   * Automated coverage checks
+
+3. Documentation
+   * Memory Bank for project context
+   * TypeDoc for API documentation
+   * Markdown for documentation
+   * Mermaid for diagrams
+
+4. Development Environment
+   * VSCode as primary IDE
+   * ESLint + Prettier for formatting
+   * Automated task running
+   * Debug configurations
 
 ## System Boundaries
 
-What are the boundaries of the system? What external systems does it interact with?
+1. Internal Systems
+   * Type system
+   * Test framework
+   * Documentation generator
+   * Development tools
+
+2. External Systems
+   * Version control
+   * Package manager
+   * CI/CD pipeline
+   * IDE extensions
 
 ## Non-Functional Requirements
 
-Performance, security, scalability, and other non-functional requirements
+1. Performance
+   * Fast type checking
+   * Quick test execution
+   * Efficient documentation generation
+
+2. Maintainability
+   * Clear code structure
+   * Comprehensive documentation
+   * Automated formatting
+   * Type safety
+
+3. Reliability
+   * Strong type guarantees
+   * Comprehensive tests
+   * Error handling
+   * Validation checks
+
+4. Scalability
+   * Modular architecture
+   * Extensible patterns
+   * Reusable components
 
 ## Technical Debt
 
-Known areas of technical debt and plans to address them
+Current technical debt items:
+
+1. Type System
+   * Additional type utilities needed
+   * More type testing patterns
+   * Enhanced error types
+
+2. Testing
+   * More test helpers
+   * Additional matchers
+   * Performance testing
+
+3. Documentation
+   * More examples needed
+   * Additional diagrams
+   * Usage patterns
 
 ---
 
