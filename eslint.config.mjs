@@ -6,7 +6,7 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default [
   ...tseslint.config({
-    files: ['src/**/*.ts', 'tests/**/*.ts'],
+    files: ['src/**/*.ts'], // , do not include 'tests/**/*.ts' for the time being.
     languageOptions: {
       parser: tseslint.parser,
       sourceType: 'module',
