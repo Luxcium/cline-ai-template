@@ -401,32 +401,7 @@ function createUser(input: Omit<User, 'id'>): Result<User> {
 
 ## Project Structure
 
-```text
-tftdd-template/
-├── src/                # Source code
-│   ├── types/          # 🏗️ Type definitions and interfaces
-│   │   ├── core/       # Core type system and utilities
-│   │   └── utils/      # Shared type utilities
-│   ├── ai/             # 🤖 AI integration components
-│   │   ├── generators/ # AI-powered code generators
-│   │   └── helpers/    # AI assistance utilities
-│   └── index.ts        # Main entry point
-├── tests/              # 🧪 Test suite
-│   ├── types/          # Type-level tests
-│   ├── integration/    # Integration tests
-│   └── utils/          # Test utilities
-├── docs/               # 📚 Generated documentation
-│   ├── api/            # API documentation
-│   └── guides/         # Usage guides
-├── .vscode/           # 💻 VSCode configuration
-│   ├── tasks.json     # Custom tasks
-│   └── settings.json  # Editor settings
-└── memory-bank/       # 🔄 Project memory system
-    ├── core/          # Core documentation
-    └── context/       # Context tracking
-```
-
-This structure emphasizes our core principles:
+The structure emphasizes our core principles:
 
 - Type-First: Centralized type definitions
 - Test-Driven: Comprehensive test coverage
