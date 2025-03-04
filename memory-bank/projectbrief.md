@@ -19,6 +19,8 @@ The TFTDD (Type-First Test-Driven Development) template provides a structured fo
    * Runtime type validation with Zod
    * Type-safe error handling
    * Type documentation generation
+   * [TypeScript](https://www.typescriptlang.org/)
+   * [Zod](https://github.com/colinhacks/zod)
 
 2. Testing Infrastructure
    * Jest with @jest/globals for type-safe testing
@@ -27,18 +29,25 @@ The TFTDD (Type-First Test-Driven Development) template provides a structured fo
    * IsolatedModules enabled for better performance
    * Test coverage reporting and enforcement
    * Automated test execution via Husky
+   * [Jest](https://jestjs.io/docs/getting-started#using-typescript)
+   * [ts-jest](https://kulshekhar.github.io/ts-jest/docs/)
 
 3. AI Integration
    * Type generation assistance
    * Test case generation
    * Code quality suggestions
    * Documentation assistance
+   * [Cline AI Documentation](https://docs.cline.bot/)
+   * [Cline GitHub](https://github.com/cline/cline)
 
 4. Documentation System
    * Memory Bank implementation
    * TypeDoc integration
    * Markdown documentation
    * Example-driven documentation
+   * [TSDoc](https://tsdoc.org/)
+   * [TypeDoc](https://typedoc.org/)
+   * [Cline Memory Bank](https://docs.cline.bot/improving-your-prompting-skills/custom-instructions-library/cline-memory-bank)
 
 5. Development Environment
    * VSCode integration
