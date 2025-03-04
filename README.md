@@ -48,7 +48,7 @@ A TypeScript project template that emphasizes Type-First Test-Driven Development
   * [VSCode Debugging](https://code.visualstudio.com/docs/editor/debugging-configuration)
   * [VSCode Settings](https://code.visualstudio.com/docs/editor/settings)
 
-* **Code Quality**
+* 📋 **Code Quality**
   * Prettier
   * ESLint
   * [Prettier](https://prettier.io/docs/next/)
