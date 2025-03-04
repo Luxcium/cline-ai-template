@@ -121,7 +121,42 @@ flowchart LR
    }
    ```
 
-2. Testing Patterns
+2. Problem Management Pattern
+
+   ```mermaid
+   flowchart TD
+     Start[File Modification Required] --> PreCheck[Pre-Modification Check]
+     PreCheck --> Count[Document Problem Count]
+     Count --> Category[Categorize Problems]
+     Category --> Change[Make Changes]
+     Change --> PostCheck[Post-Modification Check]
+     PostCheck --> Compare{Compare Problems}
+     Compare -->|New Issues| Resolve[Resolve New Issues]
+     Compare -->|No New Issues| Complete[Complete Task]
+     Resolve --> PostCheck
+   ```
+
+   * Pre-Modification Check
+
+     ```typescript
+     // Example problem tracking
+     interface ProblemState {
+       typescript: number;
+       eslint: number;
+       test: number;
+       docs: number;
+       total: number;
+       details: string[];
+     }
+     ```
+
+   * Problem Resolution Priority
+     1. Type safety (TypeScript)
+     2. Test integrity (Jest)
+     3. Code style (ESLint)
+     4. Documentation (Markdown)
+
+3. Testing Patterns
    * Test-Driven Development Pattern
 
    ```typescript
@@ -161,7 +196,7 @@ flowchart LR
    }
    ```
 
-3. Documentation Patterns
+4. Documentation Patterns
    * Memory Bank Pattern
 
    ```markdown
@@ -260,17 +295,20 @@ flowchart LR
    * Comprehensive documentation
    * Automated formatting
    * Type safety
+   * Proactive problem management
 
 3. Reliability
    * Strong type guarantees
    * Comprehensive tests
    * Error handling
    * Validation checks
+   * Pre/post modification checks
 
 4. Scalability
    * Modular architecture
    * Extensible patterns
    * Reusable components
+   * Consistent problem tracking
 
 ## Technical Debt
 

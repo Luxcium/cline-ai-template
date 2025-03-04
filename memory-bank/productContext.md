@@ -200,6 +200,86 @@ The TFTDD template solves several critical challenges in modern TypeScript devel
    * Automated tooling
    * Living documentation
 
+## Expanded Examples
+
+1. Type-First Development Example
+
+   ```typescript
+   // Define a User type
+   interface User {
+     id: string;
+     name: string;
+     email: string;
+   }
+
+   // Create a Zod schema for User validation
+   const userSchema = z.object({
+     id: z.string().uuid(),
+     name: z.string().min(1),
+     email: z.string().email()
+   });
+
+   // Function to create a User
+   function createUser(input: Omit<User, 'id'>): Result<User> {
+     const id = generateUUID();
+     const user = { id, ...input };
+
+     try {
+       userSchema.parse(user);
+       return Result.success(user);
+     } catch (error) {
+       return Result.failure(error);
+     }
+   }
+   ```
+
+2. Testing Workflow Example
+
+   ```typescript
+   import { describe, expect, it } from '@jest/globals';
+
+   describe('User Management', () => {
+     it('should create a valid user', () => {
+       const result = createUser({
+         name: 'John Doe',
+         email: 'john@example.com'
+       });
+
+       expect(result.success).toBe(true);
+       if (result.success) {
+         expect(result.value.name).toBe('John Doe');
+         expect(result.value.email).toBe('john@example.com');
+       }
+     });
+   });
+   ```
+
+3. Documentation Flow Example
+
+   ```markdown
+   # User Management
+
+   ## Overview
+   This module handles user creation and validation.
+
+   ## Design Decisions
+   * Uses Zod for runtime validation
+   * Follows Type-First Development principles
+
+   ## Usage Examples
+   ```typescript
+   const result = createUser({
+     name: 'Jane Doe',
+     email: 'jane@example.com'
+   });
+
+   if (result.success) {
+     console.log('User created:', result.value);
+   } else {
+     console.error('Error creating user:', result.error);
+   }
+   ```
+
 ---
 
 This document should be updated when there are changes to product direction, user needs, or key features.

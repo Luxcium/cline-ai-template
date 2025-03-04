@@ -18,6 +18,37 @@ Document critical implementation paths that are important to understand
 
 List known challenges and how to approach them
 
+## Problem Management Protocol
+
+### Pre-Modification Check
+
+* MUST check and document all workspace problems before any file modification
+* Count and categorize problems (ESLint, TypeScript, etc.)
+* Document specific error types and their locations
+* Analyze root causes of existing problems
+
+### During Modification
+
+* Keep track of which problems are being addressed
+* Consider impact of changes on other parts of the codebase
+* Follow established patterns and coding standards
+* Document any new patterns or solutions discovered
+
+### Post-Modification Check
+
+* MUST verify workspace problems after every file modification
+* Compare problem counts with pre-modification state
+* Document any new problems that emerged
+* Ensure no regressions were introduced
+* Fix any new problems before proceeding
+
+### Problem Resolution Priority
+
+1. Type safety issues (TypeScript errors)
+2. Test integrity issues (Jest/testing errors)
+3. Code style violations (ESLint errors)
+4. Documentation formatting (Markdown lint)
+
 ## Tool Usage
 
 ### Configuration Management
@@ -49,6 +80,7 @@ List known challenges and how to approach them
 * TypeScript version constraint (~5.7.0)
 * Unified root directory for src and tests
 * Natural pattern documentation approach
+* Strict problem management protocol implementation
 
 ### Configuration Patterns
 
@@ -56,6 +88,7 @@ List known challenges and how to approach them
 * Jest and TypeScript path resolution
 * Source and test file organization
 * Tool chain consistency
+* Problem tracking and resolution workflow
 
 ## Workflow Optimizations
 
@@ -65,6 +98,7 @@ List known challenges and how to approach them
 * Automated linting and testing
 * Clear error messages
 * Pattern-based problem solving
+* Proactive problem detection and resolution
 
 ### Testing Strategy
 
