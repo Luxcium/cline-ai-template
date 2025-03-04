@@ -67,6 +67,13 @@ const userSchema = z.object({
 });
 ```
 
+### External Resources
+
+For more information on Type-First Development, refer to the following resources:
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Zod](https://github.com/colinhacks/zod)
+
 ## Test-Driven Development
 
 ### Writing Tests
@@ -110,6 +117,13 @@ function createUser(input: Omit<User, 'id'>): Result<User> {
 }
 ```
 
+### External Resources
+
+For more information on Test-Driven Development, refer to the following resources:
+
+- [Jest](https://jestjs.io/docs/getting-started#using-typescript)
+- [ts-jest](https://kulshekhar.github.io/ts-jest/docs/)
+
 ## Comprehensive Documentation
 
 ### Generating API Documentation
@@ -126,6 +140,13 @@ yarn docs
 
 Ensure the Memory Bank is updated with the latest project context and patterns. For example, update `memory-bank/activeContext.md` regularly to reflect evolving patterns.
 
+### External Resources
+
+For more information on Comprehensive Documentation, refer to the following resources:
+
+- [TSDoc](https://tsdoc.org/)
+- [TypeDoc](https://typedoc.org/)
+
 ## AI Integration
 
 ### Using AI for Type Generation
@@ -135,6 +156,13 @@ Leverage AI tools to assist with type generation. For example, use AI suggestion
 ### Enhancing AI-Generated Tests
 
 Refine AI-generated tests to match project patterns. Incorporate feedback loops to improve the generated tests over time.
+
+### External Resources
+
+For more information on AI Integration, refer to the following resources:
+
+- [Cline AI Documentation](https://docs.cline.bot/)
+- [Cline GitHub](https://github.com/cline/cline)
 
 ## Performance Testing
 

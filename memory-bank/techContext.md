@@ -14,12 +14,16 @@
    * Husky pre-commit test hooks
    * Custom type testing utilities
    * Jest code coverage
+   * [Jest](https://jestjs.io/docs/getting-started#using-typescript)
+   * [ts-jest](https://kulshekhar.github.io/ts-jest/docs/)
 
 3. Type System
    * TypeScript strict mode
    * Zod for runtime validation
    * Custom type utilities
    * Type documentation tools
+   * [TypeScript](https://www.typescriptlang.org/)
+   * [Zod](https://github.com/colinhacks/zod)
 
 4. Code Quality
    * Modern ESLint flat configuration
@@ -33,6 +37,9 @@
    * Markdown documentation
    * Mermaid for diagrams
    * Memory Bank system
+   * [TSDoc](https://tsdoc.org/)
+   * [TypeDoc](https://typedoc.org/)
+   * [Cline Memory Bank](https://docs.cline.bot/improving-your-prompting-skills/custom-instructions-library/cline-memory-bank)
 
 ## Development Environment
 
@@ -303,6 +310,8 @@ tftdd-template/
 2. Documentation Generation
    * Enhance AI suggestions for documentation consistency
    * Ensure AI-generated documentation aligns with project patterns
+   * [Cline AI Documentation](https://docs.cline.bot/)
+   * [Cline GitHub](https://github.com/cline/cline)
 
 ---
 

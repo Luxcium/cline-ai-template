@@ -9,24 +9,52 @@ A TypeScript project template that emphasizes Type-First Test-Driven Development
   * Runtime type validation with Zod
   * Type-safe error handling with Result type
   * Comprehensive type documentation
+  * [TypeScript](https://www.typescriptlang.org/)
+  * [Zod](https://github.com/colinhacks/zod)
 
 * 🧪 **Test-Driven Development**
   * Jest + ts-jest setup
   * Custom test utilities
   * Type testing support
   * Test patterns and examples
+  * [Jest](https://jestjs.io/docs/getting-started#using-typescript)
+  * [ts-jest](https://kulshekhar.github.io/ts-jest/docs/)
 
 * 📚 **Documentation**
   * TypeDoc integration
   * Markdown documentation generation
   * Example-driven documentation
   * Comprehensive API docs
+  * [TSDoc](https://tsdoc.org/)
+  * [TypeDoc](https://typedoc.org/)
 
 * 🤖 **AI Integration**
   * AI-assisted development
   * Type generation helpers
   * Test generation utilities
   * Smart code suggestions
+  * [Cline AI Documentation](https://docs.cline.bot/)
+  * [Cline GitHub](https://github.com/cline/cline)
+
+* 🔄 **Memory Bank System**
+  * Comprehensive project documentation
+  * [Cline Memory Bank](https://docs.cline.bot/improving-your-prompting-skills/custom-instructions-library/cline-memory-bank)
+
+* 💻 **VSCode Integration**
+  * VSCode Tasks
+  * VSCode Debugging
+  * VSCode Settings
+  * [VSCode Tasks](https://code.visualstudio.com/docs/editor/tasks)
+  * [VSCode Debugging](https://code.visualstudio.com/docs/editor/debugging-configuration)
+  * [VSCode Settings](https://code.visualstudio.com/docs/editor/settings)
+
+* 📋 **Code Quality**
+  * Prettier
+  * ESLint
+  * [Prettier](https://prettier.io/docs/next/)
+  * [ESLint](https://eslint.org/docs/latest/rules/)
+  * [TypeScript ESLint](https://typescript-eslint.io/getting-started/)
+  * [ESLint Style](https://eslint.style/packages/default)
 
 ## Getting Started
 
