@@ -1,6 +1,6 @@
 {
   "name": "tftdd-template",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Type-First Test-Driven Development (TFTDD) framework with AI integration",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
